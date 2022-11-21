@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "repository": "https://github.com/georgyo/dashcast.git",
+  "author": "George Shammas <george@shamm.as>",
+  "license": "MIT",
+  "packageManager": "yarn@3.3.0",
+  "private": true,
+  "workspaces": [
+    "webrotater"
+  ]
+}
