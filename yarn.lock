@@ -4,14 +4,14 @@
 __metadata:
   version: 6
 
-"dashcast@workspace:.":
+"@dashcast/webrotater@workspace:webrotater":
   version: 0.0.0-use.local
-  resolution: "dashcast@workspace:."
+  resolution: "@dashcast/webrotater@workspace:webrotater"
   languageName: unknown
   linkType: soft
 
-"webrotater@workspace:webrotater":
+"root-workspace-0b6124@workspace:.":
   version: 0.0.0-use.local
-  resolution: "webrotater@workspace:webrotater"
+  resolution: "root-workspace-0b6124@workspace:."
   languageName: unknown
   linkType: soft
