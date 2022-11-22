@@ -5,6 +5,7 @@
     import { writable } from 'svelte/store';
 
     const currentFrame = writable("", set => {
+      
         let nextIndex = 0
         const update = () => {
             if (nextIndex >= data.urls.length) {
@@ -19,7 +20,7 @@
         update()
 
         // setup an interval timer to update the store's value repeatedly over time
-        const interval = setInterval(update, 30000 )
+        const interval = setInterval(update, data.switchTime )
             
         // return unsubscribe callback:
         // it will stop the timer when the store is destroyed

@@ -2,12 +2,23 @@ import type { PageLoad } from './$types';
  
 interface urlList {
     url: string
-    wait: number
+    wait?: number
 }
 
-export const load: PageLoad = async ({ fetch, params }) => {
-  const res = await fetch("https://gist.githubusercontent.com/georgyo/8e45d1c370aab949b412f99ecbbaea02/raw/urls.json");
-  const urls: urlList[] = await res.json();
- 
-  return { urls }
+export const load: PageLoad = async ({ url, fetch, params }) => {
+  let sourceURL = url.searchParams.get("url") || ""
+  let switchTime = parseInt(url.searchParams.get("delay") || "30") * 1000
+
+  let urls: urlList[] 
+  try {
+  const res = await fetch(sourceURL);
+  urls = await res.json();
+  } catch (err) {
+    urls = [
+      { "url":  "/info" },
+    ]
+ }
+
+
+  return { urls, switchTime}
 }
