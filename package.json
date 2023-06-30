@@ -3,7 +3,7 @@
   "repository": "https://github.com/georgyo/dashcast.git",
   "author": "George Shammas <george@shamm.as>",
   "license": "MIT",
-  "packageManager": "yarn@3.3.0",
+  "packageManager": "yarn@3.6.1",
   "private": true,
   "workspaces": [
     "webrotater"
